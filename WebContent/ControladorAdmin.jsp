@@ -102,20 +102,16 @@
                     <!-- Content Row -->
   <div class="py-5">
     <div class="container">
-    <div class="row">                                                 
-  						
-            </div>
-          </div>
-        </div>
-       </div>
-        <div class="col-md-4 offset-md-1">
-          <div class="card" style="width: 36.5rem;"  style="height: 45rem;">
+    <div class="row">
+       
+        <div class="col-md-5 offset-md-1">
+          <div class="card" style="width: 55rem;"  style="height: 45rem;">
             <div class="card-block">
              <br>
-              <img class="card-img-top" src="./img/map.svg"  width="235" height="230">
+              <img class="card-img-top" src="./img/map.svg"  width="300" height="300">
              <div class="card-body">
               
-              <font color="#002663" size=5> 
+              <font color="#002663" size=10> 
               
              En esta sección encontrarás todos los accesos directos que posee el sistema.
               </font>
@@ -299,12 +295,15 @@
         <!-- End of Content Wrapper -->
 
     </div>
+    
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+
 
    <!-- Logout Modal-->
 		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"

@@ -35,7 +35,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Modulo Evaluación - Editar Usuario</title>
+<title>Modulo Evaluación - Editar Perfil</title>
 
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
@@ -79,14 +79,8 @@
 				<div class="container-fluid">
 
 					<!-- Page Heading -->
-					<h1 class="h3 mb-2 text-gray-800">Editar Usuario</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaUsuario.jsp">Lista de Usuarios</a> /
-						<a href="EditarUsuario.jsp">Editar Usuario</a>
-						
-					<hr>
+					<h1 class="h3 mb-2 text-gray-800">Editar Perfil</h1>
+
 					<%
 					String idusuario = request.getParameter("id");
 					

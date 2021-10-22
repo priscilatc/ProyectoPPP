@@ -96,15 +96,15 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                     <h1 class="h3 mb-2 text-gray-800">Agregar  Periodo PPP</h1>  
-                    <hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaPeriodoPPP.jsp">Lista de Periodo PPP</a> /
-						<a href="AgregarPeriodo.jsp"> Agregar Periodo PPP</a>
-					
-						
-					<hr>
+                     <h1 class="h3 mb-2 text-gray-800">Agregar  Periodo PPP</h1> 
+                      
+                    <nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaPeriodoPPP.jsp">Lista de Periodo PPP</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarPeriodo.jsp">Agregar  Periodo PPP</li>
+								  </ol>
+								</nav>
                                       
 					<form class="form-group" method="post" action="./SLgestionPeriodo">
 					<input type="hidden" id="opcion" name="opcion" value="1" required />

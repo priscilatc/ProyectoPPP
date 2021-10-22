@@ -101,13 +101,14 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Editar Usuario</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaUsuario.jsp">Lista de Usuarios</a> /
-						<a href="EditarUsuario.jsp">Editar Usuario</a>
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+				
+					 <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaUsuario.jsp">Lista de Usuarios</a></li>
+								    <li class="breadcrumb-item active" aria-current="EditarUsuario.jsp">Editar Usuario</li>
+								  </ol>
+								</nav>
 					<%
 					String idusuario = request.getParameter("idusuario");
 					

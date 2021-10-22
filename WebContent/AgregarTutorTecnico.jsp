@@ -103,14 +103,13 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Agregar Tutor Técnico </h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaTutorTecnico.jsp">Lista de Tutores Técnicos</a> /
-						<a href="AgregarTutorTecnico.jsp"> Agregar de Tutores Técnicos</a>
-						
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaTutorTecnico.jsp">Lista de Tutores Técnicos</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarTutorTecnico.jsp">Agregar Tutores Técnicos</li>
+								  </ol>
+								</nav>
 					<%
 					String idtutor = request.getParameter("idtutor");
 					

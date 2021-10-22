@@ -96,14 +96,13 @@
 
                     <!-- Page Heading -->
                      <h1 class="h3 mb-2 text-gray-800">Agregar  PPP</h1> 
-                     <hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaPPP.jsp">Lista de PPP</a> /
-						<a href="AgregarPPP.jsp"> Agregar PPP</a> 
-					
-						
-					<hr>              
+                     <nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaPPP.jsp">Lista de PPP</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarPPP.jsp">Agregar PPP</li>
+								  </ol>
+								</nav>               
 
 					<form class="form-group" method="post" action="./SLgestionPPP">
 						<div class="form-group">

@@ -104,14 +104,6 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Lista de Alumnos Asignados</h1>					
-					
-						<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaAlumnosAsignadosD.jsp">Lista de Alumnos Asignados</a> 
-			
-						
-					<hr>
 
 
 					<!-- DataTales Example -->

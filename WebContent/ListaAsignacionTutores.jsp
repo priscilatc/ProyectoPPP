@@ -104,10 +104,12 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Lista de Asignacion de Tutores</h1>
-					<hr>					
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaAsignacionTutores.jsp">Lista de Asignación de Tutores</a> /		
-						<hr>
+					<nav aria-label="breadcrumb">
+				 				  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item active" aria-current="ListaAsignacionTutores.jsp">Lista de Asignación de Tutores</li>
+								  </ol>
+								</nav>
 
 					<!-- DataTales Example -->
 					<div class="card shadow mb-4">

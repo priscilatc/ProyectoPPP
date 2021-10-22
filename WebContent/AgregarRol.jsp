@@ -102,14 +102,13 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Agregar Rol</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaRol.jsp">Lista de Roles</a> /
-						<a href="AgregarRol.jsp"> Agregar Rol</a> 
-					
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaRol.jsp">Lista de Roles</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarRol.jsp">Agregar Rol</li>
+								  </ol>
+								</nav> 
                      
 					<form class="form-group" method="post" action="./SLgestionRol">
 						<div class="form-group">

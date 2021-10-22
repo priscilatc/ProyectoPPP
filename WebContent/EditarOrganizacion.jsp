@@ -97,13 +97,14 @@
 
                     <!-- Page Heading -->
                      <h1 class="h3 mb-2 text-gray-800">Editar  Organización</h1>
-                    <hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaOrganizacion.jsp">Lista de Organizaciones</a> /
-						<a href="EditarOrganizacion.jsp">Editar Organización</a>
-						
-					<hr>
+                     <nav aria-label="breadcrumb">
+				
+					 <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaOrganizacion.jsp">Lista de Organizaciones</a></li>
+								    <li class="breadcrumb-item active" aria-current="EditarOrganizacion.jsp">Editar Organización</li>
+								  </ol>
+								</nav> 
                     <%
 					String idorg = request.getParameter("idorg");
 

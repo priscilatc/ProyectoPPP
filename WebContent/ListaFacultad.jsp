@@ -103,12 +103,12 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Lista de Facultades</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaFacultad.jsp">Lista de Facultades</a>
-						
-					<hr>
+					 <nav aria-label="breadcrumb">
+				 				  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item active" aria-current="ListaFacultad.jsp">Lista de Facultades</li>
+								  </ol>
+								</nav>
 
 
 					<!-- DataTales Example -->

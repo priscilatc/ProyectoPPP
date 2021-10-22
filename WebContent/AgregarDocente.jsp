@@ -102,14 +102,13 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Agregar Docente </h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaDocente.jsp">Lista de Docentes</a> /
-						<a href="AgregarDocente.jsp"> Agregar Docentes</a> 
-					
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaDocente.jsp">Lista de Docentes</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarDocente.jsp">Agregar  Docente</li>
+								  </ol>
+								</nav>
                      
 
 					<form class="form-group" method="post" action="./SLgestionDocente">

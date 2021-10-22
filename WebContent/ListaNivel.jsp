@@ -104,13 +104,12 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Lista de Nivel 180</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaNivel.jsp">Lista de Nivel</a> 
-					
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+				 				  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item active" aria-current="ListaNivel.jsp">Lista de Nivel</li>
+								  </ol>
+								</nav>
 
 
 					<!-- DataTales Example -->

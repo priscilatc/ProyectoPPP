@@ -101,13 +101,13 @@
                     <!-- Page Heading -->
                      <h1 class="h3 mb-2 text-gray-800">Editar  Coordinacion</h1>
                      
-                    <hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaCoordinacion.jsp">Lista de Coordinación</a> /
-						<a href="EditarCoordinacion.jsp">Editar Coordinación</a>
-						
-					<hr>
+                    <nav aria-label="breadcrumb">
+                 				 <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaCoordinacion.jsp">Lista de Coordinación</a></li>
+								    <li class="breadcrumb-item active" aria-current="EditarCoordinacion.jsp">Editar Coordinación</li>
+								  </ol>
+								</nav>
 					
                     <%
 					String idcoordinacion = request.getParameter("idcoordinacion");

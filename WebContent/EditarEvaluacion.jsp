@@ -104,14 +104,13 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Editar Evaluación</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaEvaluacion.jsp">Lista de Evaluacion</a> /
-						<a href="EditarEvaluacion.jsp"> Editar Evaluacion</a> 
-						
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+                 				 <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaEvaluacion.jsp">Lista de Evaluacion</a></li>
+								    <li class="breadcrumb-item active" aria-current="EditarEvaluacion.jsp">Editar Evaluacion</li>
+								  </ol>
+								</nav>
 					<%
 					String idevaluacion = request.getParameter("idevaluacion");
 					

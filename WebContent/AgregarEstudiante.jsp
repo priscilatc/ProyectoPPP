@@ -104,14 +104,13 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Agregar Estudiante</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaEstudiante.jsp">Lista de Estudiantes</a> /
-						<a href="AgregarEstudiante.jsp"> Agregar Estudiante</a> 
-						
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaEstudiante.jsp">Lista de Estudiantes</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarEstudiante.jsp">Agregar de Estudiante</li>
+								  </ol>
+								</nav>
 					<%
 					String idestudiante = request.getParameter("idestudiante");
 					%>

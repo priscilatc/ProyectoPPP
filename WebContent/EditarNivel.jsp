@@ -102,13 +102,14 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Editar Nivel</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaNivel.jsp">Lista de Nivel</a> /
-						<a href="EditarNivel.jsp">Editar Nivel</a>
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+				
+					 <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaNivel.jsp">Lista de Nivel</a></li>
+								    <li class="breadcrumb-item active" aria-current="EditarNivel.jsp">Editar Nivel</li>
+								  </ol>
+								</nav>
                      
 					<%
 					String idnivel = request.getParameter("idnivel");

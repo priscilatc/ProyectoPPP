@@ -63,9 +63,14 @@
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
+<!-- Page Wrapper -->
     <div id="wrapper">
     
+     <!-- Sidebar -->
+        
+        <jsp:include page="WEB-INF/layout/sidebar.jsp"></jsp:include>
+        
+        <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -82,16 +87,15 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->                   
-                        <h1 class="h3 mb-0 text-gray-800">Perfil del Alumno</h1>                       
-                       <hr>						
-						<a href="index.jsp">Inicio</a>
-						<hr>
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Perfil del Alumno</h1>
+                       
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
-                    	<div class="card shadow mb-4"  style="width: 18rem;">
+                    	<div class="card shadow mb-4"  style="width: 22rem;">
 						<div class="card-header py-3">
 							<h6 class="m-0 font-weight-bold text-primary">Datos Personales</h6>
 						
@@ -103,16 +107,15 @@
 							DTEstudiante dte = new DTEstudiante();
 							es=dte.getEst(Integer.parseInt(idestudiante));
 						%>
-						
 							<div class="table-responsive">
 								<table class="table borderless" id="tblInfo" width="130px"
 									cellspacing="0">															
 									<tbody>
-									<tr><th WIDTH="50" >Nombres</th><td><%=es.getNombres() %></td></tr>
+								<tr><th WIDTH="50" >Nombres</th><td><%=es.getNombres() %></td></tr>
 									<tr><th WIDTH="50" >Apellidos</th><td><%=es.getApellidos()%></td></tr>
                                     <tr><th WIDTH="50" >Correo</th><td><%=es.getCorreoInstitucional()%></td></tr>
                                     <tr><th WIDTH="50" >Celular</th><td><%=es.getCelular()%></td></tr>
-                                    <tr><th WIDTH="50" >Condición</th><td><%=es.getCondicion()%></td></tr>                                                                    
+                                    <tr><th WIDTH="50" >Condición</th><td><%=es.getCondicion()%></td></tr>            			                   							
 									</tbody>
 								</table>
 						
@@ -121,6 +124,7 @@
 				      </div>
                     </div>
 
+                </div>
                 <!-- /.container-fluid -->
 
             </div>

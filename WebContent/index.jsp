@@ -105,10 +105,10 @@
                              	     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 										  <div class="carousel-inner">
 										    <div class="carousel-item active">
-										      <img class="d-block w-100" src="./img/Banner1.png" alt="First slide">
+										      <img class="d-block w-100" src="./img/Banner 1.png" alt="First slide">
 										    </div>
 										    <div class="carousel-item">
-										      <img class="d-block w-100" src="./img/Banner2.png" alt="Second slide">
+										      <img class="d-block w-100" src="./img/Banner 2.png" alt="Second slide">
 										    </div>
 										  </div>
 										</div>
@@ -127,7 +127,7 @@
 					            <div class="col-md-7 col-12 order-md-1 order-2">
 					                  <font color="#002663" size=6> 
 					              
-					               <h1>Bienvenido al Sistema de Prácticas PreProfesionales</h1></font>
+					               <h1>Bienvenido <%=(String)session.getAttribute("login")%> al Sistema de Prácticas PreProfesionales</h1></font>
 					            
 					         <p>En este sistema podrás realizar la evaluación técnica <br>
 					                 de tus practicantes </p>
@@ -143,7 +143,7 @@
 					          <div class="row align-items-center">
 					            <div class="col-md-7 col-12 order-md-1 order-2">
 					             <font color="#002663" size=6> 
-					              <h1>Bienvenido al Sistema de Prácticas PreProfesionales</h1></font>
+					              <h1>Bienvenido <%=(String)session.getAttribute("login")%> al Sistema de Prácticas PreProfesionales</h1></font>
 					       
 					              <p>En este sistema podrás realizar la evaluación técnica <br>
 					                 de tus practicantes </p>
@@ -160,23 +160,45 @@
                     <%
                     }if (cargo.equals("Tutor Academico")){
                     %>
-						<div class="card shadow mb-4">						
-                        	<div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">¡Bienvenid@! <%=(String)session.getAttribute("login")%></h6>
-                        	 </div>
-                             	<div class="card-body">
-                             	     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-										  <div class="carousel-inner">
-										    <div class="carousel-item active">
-										      <img class="d-block w-100" src="./img/Banner1.png" alt="First slide">
-										    </div>
-										    <div class="carousel-item">
-										      <img class="d-block w-100" src="./img/Banner2.png" alt="Second slide">
-										    </div>
-										  </div>
-										</div>
-                            	 </div>       
-                    		</div>
+						<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+					  <div class="carousel-inner">
+					    <div class="carousel-item active">
+					      <div class="mask flex-center">
+					        <div class="container">
+					          <div class="row align-items-center">
+					            <div class="col-md-7 col-12 order-md-1 order-2">
+					                  <font color="#002663" size=6> 
+					              
+					               <h1>Bienvenido <%=(String)session.getAttribute("login")%> al Sistema de Prácticas PreProfesionales</h1></font>
+					            
+					              <p>En este sistema podrás llevar un mejor control<br>
+					              sobre los datos de tus alumnos asignados</p>
+					              <a ></a> </div>
+					            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/Profesor1.svg" class="mx-auto" alt="slide" width="445" height="350" ></div>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					    <div class="carousel-item">
+					      <div class="mask flex-center">
+					        <div class="container">
+					          <div class="row align-items-center">
+					            <div class="col-md-7 col-12 order-md-1 order-2">
+					             <font color="#002663" size=6> 
+					              <h1>Bienvenido <%=(String)session.getAttribute("login")%> al Sistema de Prácticas PreProfesionales</h1></font>
+					       
+					              <p>En este sistema podrás llevar un mejor control<br>
+					              sobre los datos de tus alumnos asignados</p>
+					              <a ></a> </div>
+					            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/Profesor2.svg" class="mx-auto" alt="slide" width="445" height="350" ></div>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					   
+					  </div>
+					  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> 
+					  </div>
                     <%
                     } if (cargo.equals("Estudiante")){
                     %>
@@ -189,7 +211,7 @@
 					            <div class="col-md-7 col-12 order-md-1 order-2">
 					                  <font color="#002663" size=6> 
 					              
-					               <h1>Bienvenido al Sistema de Prácticas PreProfesionales</h1></font>
+					               <h1>Bienvenido <%=(String)session.getAttribute("login")%> al Sistema de Prácticas PreProfesionales</h1></font>
 					            
 					              <p>En este sistema podrás realizar tu auto evaluación de PPP <br>
 					               y accederás a los resultados de tu evaluación técnica</p>
@@ -205,7 +227,7 @@
 					          <div class="row align-items-center">
 					            <div class="col-md-7 col-12 order-md-1 order-2">
 					             <font color="#002663" size=6> 
-					              <h1>Bienvenido al Sistema de Prácticas PreProfesionales</h1></font>
+					              <h1>Bienvenido <%=(String)session.getAttribute("login")%> al Sistema de Prácticas PreProfesionales</h1></font>
 					       
 					              <p>En este sistema podrás realizar tu auto evaluación de PPP <br>
 					               y accederás a los resultados de tu evaluación técnica</p>

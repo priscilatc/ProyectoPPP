@@ -96,13 +96,13 @@
 
                     <!-- Page Heading -->
                      <h1 class="h3 mb-2 text-gray-800">Editar  Periodo PPP</h1>
-                     <hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaPeriodoPPP.jsp">Lista de Periodo PPP</a> /
-						<a href="EditarPeriodo.jsp">Editar Periodo PPP</a>
-						
-					<hr>
+                     <nav aria-label="breadcrumb">		
+						 <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaPeriodoPPP.jsp">Lista de Periodo PPP</a></li>
+								    <li class="breadcrumb-item active" aria-current="EditarPeriodo.jsp">Editar Periodo PPP</li>
+								  </ol>
+								</nav>
                      
 					<%
 					String idperiodoppp = request.getParameter("idperiodoppp");

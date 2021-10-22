@@ -98,13 +98,14 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Editar Rol</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaRol.jsp">Lista de Roles</a> /
-						<a href="EditarRol.jsp">Editar Rol</a>
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+				
+					 <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaRol.jsp">Lista de Roles</a></li>
+								    <li class="breadcrumb-item active" aria-current="EditarRol.jsp">Editar Rol</li>
+								  </ol>
+								</nav> 
                      
 					<%
 					String idrol = request.getParameter("idrol");

@@ -103,12 +103,13 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Agregar Opciones al rol</h1>
-					 <hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaRol.jsp">Lista de Roles</a> /
-						<a href="AgregarRolOpcion.jsp"> Agregar Opciones al rol</a> 
-					<hr>
+					<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaRol.jsp">Lista de Roles</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarRolOpcion.jsp">Agregar Opciones al rol</li>
+								  </ol>
+								</nav>
 					<%
 						String idrol = request.getParameter("idrol");
 						

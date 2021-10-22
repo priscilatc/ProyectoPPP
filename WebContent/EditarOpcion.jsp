@@ -101,13 +101,14 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Editar Opción</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaOpcion.jsp">Lista de Opciones</a> /
-						<a href="EditarOpcion.jsp">Editar Opcion</a>
-						
-					<hr>
+					<nav aria-label="breadcrumb">
+				
+					 <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaOpcion.jsp">Lista de Opciones</a></li>
+								    <li class="breadcrumb-item active" aria-current="EditarOpcion.jsp">Editar Opcion</li>
+								  </ol>
+								</nav> 
                      
 					<%
 					String idopcion = request.getParameter("idopcion");

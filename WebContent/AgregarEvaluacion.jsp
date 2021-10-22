@@ -104,14 +104,14 @@
 
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">Agregar Evaluación</h1>
-					<hr>
-						
-						<a href="index.jsp">Inicio</a> /
-						<a href="ListaEvaluacion.jsp">Lista de Evaluacion</a> /
-						<a href="AgregarEvaluacion.jsp"> Agregar Evaluacion</a> 
-						
-						
-					<hr>
+					
+					<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+								    <li class="breadcrumb-item"><a href="ListaEvaluacion.jsp">Lista de Evaluacion</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarEvaluacion.jsp">Agregar  Evaluacion</li>
+								  </ol>
+								</nav>
 					
 					<form class="form-group" method="post" action="./SLgestionEvaluacion">
 						<div class="form-group">
