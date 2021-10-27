@@ -44,6 +44,7 @@ public class SLgestionDocente extends HttpServlet {
 		DTDocente dtd =  new DTDocente();
 		Docente d = new Docente();
 		
+		int idusuario =0;
 		
 		d.setNombres(request.getParameter("nombres"));
 		d.setApellidos(request.getParameter("apellidos"));
@@ -57,13 +58,17 @@ public class SLgestionDocente extends HttpServlet {
 		d.setCedula(request.getParameter("cedula"));
 		d.setCategoria(request.getParameter("categoria"));
 		d.setIdCoordinacion(Integer.parseInt(request.getParameter("idcoordinacion")));
-		d.setIdUsuario(Integer.parseInt(request.getParameter("idusuario")));
-		
+		idusuario = Integer.parseInt(request.getParameter("idusuario"));
+		d.setIdUsuario(idusuario);
 		switch (opc) 
 		{
 			case 1: 
 				try 
 				{
+					if(dtd.verificarUsuarioExiste(idusuario)) {
+						response.sendRedirect("AgregarDocente.jsp?msj=1");
+					}
+					else {
 					if(dtd.guardarDocente(d))
 					{
 						response.sendRedirect("ListaDocente.jsp?msj=1");
@@ -73,6 +78,7 @@ public class SLgestionDocente extends HttpServlet {
 						response.sendRedirect("ListaDocente.jsp?msj=2");
 					}
 				} 
+			}
 				catch (Exception e) 
 				{
 					System.err.println("SLgestionDocente el error es: " +e.getLocalizedMessage());

@@ -66,7 +66,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.css" rel="stylesheet">
-
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -118,16 +118,17 @@
 											
 						<label class="col-sm-2 control-label text-gpromedix">Fecha de inicio: </label>
 						<div class="col-sm-6">
-							<input id="fechainicio" name="fechainicio" type="date" class="form-control has-gpromedix" 
+							<input id="fechainicio" name="fechainicio" type="text" class="form-control has-gpromedix" 
 							placeholder="Fecha de inicio" data-toggle="tooltip" 
 							data-placement="bottom" title="Ingresar la fecha de inicio" required>
 						</div>	
 						
+						
 					<label class="col-sm-2 control-label text-gpromedix">Fecha de fin: </label>
 						<div class="col-sm-6">
-							<input id="fechafin" name="fechafin" type="date" class="form-control has-gpromedix" 
+							<input id="fechafin" name="fechafin" type="text" class="form-control has-gpromedix" 
 							placeholder="Fecha de Fin" data-toggle="tooltip" 
-							data-placement="bottom" title="Ingresar la fecha de fin" required>
+							data-placement="bottom" title="Ingresar la fecha de fin" required>							
 						</div>	
 						  
 					</div>
@@ -214,10 +215,41 @@
 
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
+    
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+	
 
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+    
+    <script>
+    var getDate = function(input) {
+    	  return new Date(input.date.valueOf());
+    	}
+
+    	$('#fechainicio, #fechafin').datepicker({
+    	  format: "dd/mm/yyyy",
+    	  language: 'es'
+    	});
+
+    	$('#fechafin').datepicker({
+    	  startDate: '+6d',
+    	  endDate: '+36d',
+    	});
+
+    	$('#fechainicio').datepicker({
+    	  startDate: '+5d',
+    	  endDate: '+35d',
+    	}).on('changeDate',
+    	  function(selected) {
+    	    $('#fechafin').datepicker('clearDates');
+    	    $('#fechafin').datepicker('setStartDate', getDate(selected));
+    	  });
+    </script>
     
     
 

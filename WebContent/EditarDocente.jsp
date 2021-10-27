@@ -126,7 +126,7 @@
 							
 							<label class="col-sm-2 control-label text-rpromedix">Usuario</label>							
 								    <div class="col-sm-6">							    
-								      <select name="idusuario" id="idusuario" class="form-control" required>								    	
+								      <select name="idusuario" id="idusuario" class="form-control" disabled="disabled" required>								    	
 								      <%
 										ArrayList<VW_usuario> listaUsuarios = new ArrayList<VW_usuario>();
 										listaUsuarios = dtu.listarUsuarios();

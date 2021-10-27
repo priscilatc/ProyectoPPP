@@ -482,4 +482,38 @@ public class DTDocente {
 		}		
 		return vwp;
 	}
+	
+	public boolean verificarUsuarioExiste(int idusuario) {        
+        boolean res = false;       
+        String SQL = "SELECT idusuario FROM public.docente WHERE idusuario = ?";
+        try{
+        	c = PoolConexion.getConnection();
+			ps = c.prepareStatement(SQL);
+			ps.setInt(1, idusuario); 
+			rs = ps.executeQuery();
+            if(rs.next())
+                res = true;
+        } catch(Exception e){
+            System.err.print("Ha ocurrido un error: "+ e.getMessage());
+        } 
+        finally{
+        	try {
+				if(rs != null){
+					rs.close();
+				}
+				if(ps != null){
+					ps.close();
+				}
+				if(c != null){
+					PoolConexion.cerrarConexion(c);
+				}
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+        }        
+        return res;
+    }
 }

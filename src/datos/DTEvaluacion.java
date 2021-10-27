@@ -332,4 +332,53 @@ public class DTEvaluacion {
 		}		
 		return ev;
 	}
+	
+//	public ArrayList<VW_estado> listarEstado()
+//	{
+//		ArrayList<VW_estado> listaEstado = new ArrayList<VW_estado>();
+//		
+//		String sql = "SELECT * FROM public.vista_estado";
+//		try 
+//		{
+//			c = PoolConexion.getConnection();
+//			ps = c.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE, ResultSet.HOLD_CURSORS_OVER_COMMIT);
+//			rs = ps.executeQuery();
+//			while(rs.next())
+//			{
+//				VW_estado vwe = new VW_estado();
+//				vwe.setIdevaluacion(rs.getInt("idevaluacion"));
+//				vwe.setEst(rs.getInt("est"));
+//				vwe.setEstado(rs.getString("estado"));
+//				
+//				listaEstado.add(vwe);
+//				
+//			}
+//		} 
+//		catch (Exception e) 
+//		{
+//			System.err.println("DT Evaluacion: Error en listar estados " + e.getMessage());
+//			e.printStackTrace();
+//		}
+//		finally 
+//		{
+//			try 
+//			{
+//				if(rs != null)
+//					rs.close();
+//				
+//				if(ps != null)
+//					ps.close();
+//				
+//				if(c != null)
+//					PoolConexion.cerrarConexion(c);
+//			} 
+//			catch (Exception e2) 
+//			{
+//				System.err.println("DT Evaluacion: Error en listar estados" + e2.getMessage());
+//				e2.printStackTrace();
+//			}
+//		}
+//		
+//		return listaEstado;
+//	}
 }

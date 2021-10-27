@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import entidades.UsuarioRol;
+import vistas.VW_usuario_opciones;
 import vistas.VW_usuario_rol;
 
 
@@ -221,5 +222,42 @@ public class DTUsuarioRol {
 		}
 		
 		return encontrado;
+	}
+	
+	public ArrayList<VW_usuario_opciones> listaOpciones(String login, String rol)
+	{
+		ArrayList<VW_usuario_opciones> permisosUsuarios = new ArrayList<VW_usuario_opciones>();
+		String sql = "SELECT * from public.vista_usuario_opciones where usuario = '?' AND rol = '?'";
+		
+		try 
+		{
+			c = PoolConexion.getConnection();
+			PreparedStatement ps = c.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, 
+					ResultSet.CONCUR_UPDATABLE,ResultSet.HOLD_CURSORS_OVER_COMMIT);
+			ps.setString(1, login);
+			ps.setString(2, rol);
+			rs = ps.executeQuery();
+			
+			while(rs.next())
+			{
+				VW_usuario_opciones vwuo = new VW_usuario_opciones();
+				
+				vwuo.setIdusuario(rs.getInt("idusuario"));
+				vwuo.setUsuario(rs.getString("usuario"));
+				vwuo.setPwd(rs.getString("pwd"));
+				vwuo.setRol(rs.getString("rol"));
+				vwuo.setOpcion(rs.getString("opcion"));
+				vwuo.setUrl(rs.getString("url"));
+				
+				
+				permisosUsuarios.add(vwuo);
+			}
+		} 
+		catch (SQLException e) 
+		{
+			System.err.println("DATOS: ERROR AL OBTENER OPCIONES");
+			e.printStackTrace();
+		}
+		return permisosUsuarios;
 	}
 }

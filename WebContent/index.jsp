@@ -41,7 +41,8 @@
 		               }
 		              String cargo ="";
 		              cargo= (String) session.getAttribute("rol");
-		              cargo = cargo ==null?"":cargo;		             
+		              cargo = cargo ==null?"":cargo;		
+		            	    								
 		              
     %>
 <head>

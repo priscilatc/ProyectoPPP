@@ -44,6 +44,7 @@ public class SLgestionTutor extends HttpServlet {
 		DTTutorTecnico dtt =  new DTTutorTecnico();
 		TutorTecnico t = new TutorTecnico();
 		
+		int idusuario=0;
 		
 		t.setNombres(request.getParameter("nombres"));
 		t.setApellidos(request.getParameter("apellidos"));
@@ -55,13 +56,17 @@ public class SLgestionTutor extends HttpServlet {
 		t.setCarneUca(request.getParameter("carneUca"));
 		t.setCedula(request.getParameter("cedula"));
 		t.setIdOrg(Integer.parseInt(request.getParameter("idorg")));
-		t.setIdUsuario(Integer.parseInt(request.getParameter("idusuario")));
-		
+		idusuario=Integer.parseInt(request.getParameter("idusuario"));
+		t.setIdUsuario(idusuario);
 		switch (opc) 
 		{
 			case 1: 
 				try 
 				{
+					if(dtt.verificarUsuarioExiste(idusuario)) {
+						response.sendRedirect("AgregarTutorTecnico.jsp?msj=1");
+					}
+					else {
 					if(dtt.guardarTutort(t))
 					{
 						response.sendRedirect("ListaTutorTecnico.jsp?msj=1");
@@ -69,6 +74,7 @@ public class SLgestionTutor extends HttpServlet {
 					else
 					{
 						response.sendRedirect("ListaTutorTecnico.jsp?msj=2");
+					}
 					}
 				} 
 				catch (Exception e) 

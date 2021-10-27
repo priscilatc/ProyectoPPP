@@ -3,7 +3,9 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%
+	String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj");
+%>    
 <!DOCTYPE html>
 <html lang="es">
 <%
@@ -69,7 +71,7 @@
 
 <!-- Custom styles for this template-->
 <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+<link rel=stylesheet href="jAlert/dist/jAlert.css"/>
 <!-- Custom styles for this page -->
 <link href="vendor/datatables/dataTables.bootstrap4.min.css"
 	rel="stylesheet">
@@ -329,6 +331,21 @@
 
 		<!-- Page level custom scripts -->
 		<script src="js/demo/datatables-demo.js"></script>
+		
+		<script src="jAlert/dist/jAlert.min.js"></script>
+  	    <script src="jAlert/dist/jAlert-functions.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function ()
+        	    {
+        	        var mensaje = "";
+        	        mensaje = "<%=varMSJ%>";
+        	        
+        	        if(mensaje == "1")
+        	        {
+        	            errorAlert('Error', 'El usuario con el que intenta registrar al docente ya ha sido asignado');
+        	        }
+        	    });
+		</script>
 		
 </body>
 
