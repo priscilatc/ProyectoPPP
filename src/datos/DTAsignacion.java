@@ -297,4 +297,38 @@ public class DTAsignacion {
 		}		
 		return a;
 	}
+	
+	public boolean verificarAlumnoExiste(int idestudiante) {        
+        boolean res = false;       
+        String SQL = "SELECT idestudiante FROM public.asignaciontutores WHERE idestudiante = ?";
+        try{
+        	c = PoolConexion.getConnection();
+			ps = c.prepareStatement(SQL);
+			ps.setInt(1, idestudiante); 
+			rs = ps.executeQuery();
+            if(rs.next())
+                res = true;
+        } catch(Exception e){
+            System.err.print("Ha ocurrido un error: "+ e.getMessage());
+        } 
+        finally{
+        	try {
+				if(rs != null){
+					rs.close();
+				}
+				if(ps != null){
+					ps.close();
+				}
+				if(c != null){
+					PoolConexion.cerrarConexion(c);
+				}
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+        }        
+        return res;
+    }
 }

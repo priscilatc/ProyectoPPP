@@ -45,9 +45,12 @@ public class SLgestionEvaluacion extends HttpServlet {
 		DTEvaluacion dte =  new DTEvaluacion();
 		Evaluacion ev = new Evaluacion();
 		
+		String url = "";
+		
 		ev.setIdNivel(Integer.parseInt(request.getParameter("idnivel")));
 		ev.setIdPeriodoPPP(Integer.parseInt(request.getParameter("idperiodoppp")));
-		ev.setUrl(request.getParameter("url"));
+		url= request.getParameter("url");
+		ev.setUrl(url);
 		ev.setEstado(Integer.parseInt(request.getParameter("estado")));
 		
 		switch (opc) 
@@ -55,6 +58,10 @@ public class SLgestionEvaluacion extends HttpServlet {
 			case 1: 
 				try 
 				{
+					if(dte.verificarURL(url)) {
+						response.sendRedirect("AgregarEvaluacion.jsp?msj=1");
+					}
+					else {
 					if(dte.guardarEvaluacion(ev))
 					{
 						response.sendRedirect("ListaEvaluacion.jsp?msj=1");
@@ -64,6 +71,7 @@ public class SLgestionEvaluacion extends HttpServlet {
 						response.sendRedirect("ListaEvaluacion.jsp?msj=2");
 					}
 				} 
+				}
 				catch (Exception e) 
 				{
 					System.err.println("SLgestionEvaluacion el error es: " +e.getLocalizedMessage());

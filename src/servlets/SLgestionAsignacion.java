@@ -44,17 +44,24 @@ public class SLgestionAsignacion extends HttpServlet {
 		DTAsignacion dta =  new DTAsignacion();
 		AsignacionTutores a = new AsignacionTutores();
 		
+		int idestudiante=0;
+		
 		
 		a.setComentario(request.getParameter("comentario"));
 		a.setId_docente(Integer.parseInt(request.getParameter("id_docente")));
 		a.setIdTutor(Integer.parseInt(request.getParameter("idtutor")));
-		a.setIdEstudiante(Integer.parseInt(request.getParameter("idestudiante")));
+		idestudiante = Integer.parseInt(request.getParameter("idestudiante"));
+		a.setIdEstudiante(idestudiante);
 		
 		switch (opc) 
 		{
 			case 1: 
 				try 
 				{
+					if(dta.verificarAlumnoExiste(idestudiante)) {
+						response.sendRedirect("AgregarAsignacionTutores.jsp?msj=1");
+					}
+					else {
 					if(dta.guardarAsignacion(a))
 					{
 						response.sendRedirect("ListaAsignacionTutores.jsp?msj=1");
@@ -62,6 +69,7 @@ public class SLgestionAsignacion extends HttpServlet {
 					else
 					{
 						response.sendRedirect("ListaAsignacionTutores.jsp?msj=2");
+					}
 					}
 				} 
 				catch (Exception e) 

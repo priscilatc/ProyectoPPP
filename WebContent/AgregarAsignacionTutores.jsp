@@ -3,6 +3,10 @@
 <%@page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%
+	String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj");
+%>
 <!DOCTYPE html>
 <html lang="es">
 <%
@@ -62,6 +66,7 @@
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
 	type="text/css">
+<link rel=stylesheet href="jAlert/dist/jAlert.css"/>
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
 	rel="stylesheet">
@@ -276,6 +281,21 @@
 
 		<!-- Page level custom scripts -->
 		<script src="js/demo/datatables-demo.js"></script>
+		
+		<script src="jAlert/dist/jAlert.min.js"></script>
+  	    <script src="jAlert/dist/jAlert-functions.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function ()
+        	    {
+        	        var mensaje = "";
+        	        mensaje = "<%=varMSJ%>";
+        	        
+        	        if(mensaje == "1")
+        	        {
+        	            errorAlert('Error', 'El Estudiante que desea asignar ya ha sido asignado dentro del sistema');
+        	        }
+        	    });
+		</script>
 
 
 </body>

@@ -4,7 +4,9 @@
 <%@page import="datos.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%
+	String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj");
+%>
 <!DOCTYPE html>
 <html lang="es">
 <%
@@ -267,6 +269,22 @@
 
 		<!-- Page level custom scripts -->
 		<script src="js/demo/datatables-demo.js"></script>
+		
+		<script src="jAlert/dist/jAlert.min.js"></script>
+  	    <script src="jAlert/dist/jAlert-functions.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function ()
+        	    {
+        	        var mensaje = "";
+        	        mensaje = "<%=varMSJ%>";
+        	        
+        	        if(mensaje == "1")
+        	        {
+        	            errorAlert('Error', 'Ya existe el URL que desea registrar dentro del sistema');
+        	        }
+        	    });
+		</script>
+		
 		
 		
 </body>

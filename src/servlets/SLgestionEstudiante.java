@@ -46,17 +46,19 @@ public class SLgestionEstudiante extends HttpServlet {
 		Estudiante es = new Estudiante();
 		
 		int idusuario=0;
+		String carneuca = "";
 		
 		es.setNombres(request.getParameter("nombres"));
 		es.setApellidos(request.getParameter("apellidos"));
 		es.setCorreoInstitucional(request.getParameter("correoinstitucional"));
 		es.setCelular(request.getParameter("celular"));
 		es.setCondicion(request.getParameter("condicion"));
-		es.setCarneuca(request.getParameter("carneuca"));
+		carneuca = request.getParameter("carneuca");
 	    es.setSexo(Integer.parseInt(request.getParameter("sexo")));
 	    es.setIdCoordinacion(Integer.parseInt(request.getParameter("idcoordinacion")));
 	    idusuario = Integer.parseInt(request.getParameter("idusuario"));
 		es.setIdUsuario(idusuario);
+		es.setCarneuca(carneuca);
 	    
 		switch (opc) 
 		{
@@ -77,6 +79,7 @@ public class SLgestionEstudiante extends HttpServlet {
 						response.sendRedirect("ListaEstudiante.jsp?msj=2");
 					}
 					}
+					
 				} 
 				catch (Exception e) 
 				{

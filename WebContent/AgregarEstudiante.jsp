@@ -319,7 +319,7 @@
         	        
         	        if(mensaje == "1")
         	        {
-        	            errorAlert('Error', 'El usuario con el que intenta registrar al estudiante ya ha sido asignado');
+        	            errorAlert('Error', 'El usuario que desea asignar ya ha sido asignado dentro del sistema');
         	        }
         	    });
 		</script>
