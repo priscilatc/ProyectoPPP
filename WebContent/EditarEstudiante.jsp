@@ -202,6 +202,25 @@
 								data-placement="bottom" title="Min:2 Max:30" value="<%=es.getApellidos() %>"
 									required>
 							</div>
+							
+							<label class="col-sm-2 control-label text-gpromedix">Sexo</label>
+							<div class="col-sm-6">
+							<select id="sexo" name="sexo" class="form-control" required>
+                                <option value="" selected disabled>Seleccionar...</option> 
+                                <%if(es.getSexo()==1)
+                                {	
+                    				%><option selected="true" value="1">Masculino</option>	
+                                	<option value="2">Femenino</option>
+                                <%
+                                }else{
+                    				%><option value="1">Masculino</option>	
+                                	<option selected="true" value="2">Femenino</option>
+                                <%                               	
+                                }
+                                
+                                %>
+                                </select>
+                                </div>
 
 							<label class="col-sm-2 control-label text-gpromedix">Celular</label>
 							<div class="col-sm-6">

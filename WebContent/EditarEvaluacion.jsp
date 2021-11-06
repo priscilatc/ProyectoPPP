@@ -188,17 +188,24 @@
 								data-placement="bottom" title="Min:2 Max:120" value="<%=e.getPlantilla() %>" required>							
 							</div>
 						
-						<label class="col-sm-2 control-label text-rpromedix">Activo</label>
-						    <div class="col-sm-6">
-						      <select name="activo"class="form-control" required>
-						      	<option selected="true" value="<%=e.getActivo()%>"></option>
-						        <option value="1">Activo</option>
-						        <option value="2">Inactivo</option>							     
-						      </select>
-						      <div>
-							    <a href="https://github.com/danielfarrell/bootstrap-combobox"></a>
-							  </div>
-						    </div>								
+						<label class="col-sm-2 control-label text-gpromedix">Activo</label>
+							<div class="col-sm-6">
+							<select id="activo" name="activo" class="form-control" required>
+                                <option value="" selected disabled>Seleccionar...</option> 
+                                <%if(e.getActivo()==1)
+                                {	
+                    				%><option selected="true" value="1">Activo</option>	
+                                	<option value="2">Inactivo</option>
+                                <%
+                                }else{
+                    				%><option value="1">Activo</option>	
+                                	<option selected="true" value="2">Inactivo</option>
+                                <%                               	
+                                }
+                                
+                                %>
+                                </select>
+                                </div>								
 																
 					</div>
 										

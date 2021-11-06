@@ -327,7 +327,7 @@
         	        
         	        if(mensaje == "1")
         	        {
-        	            errorAlert('Error', 'El usuario con el que intenta registrar al estudiante ya ha sido asignado');
+        	            errorAlert('Error', 'El usuario con el que intenta registrar al tutor técnico ya ha sido asignado');
         	        }
         	    });
 		</script>
