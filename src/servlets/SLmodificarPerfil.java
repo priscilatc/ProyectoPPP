@@ -45,25 +45,33 @@ public class SLmodificarPerfil extends HttpServlet {
 			DTUsuario dtu = new DTUsuario();
 			
 			int idusuario = 0;
-			String usuario, pwd = "";
+			String usuario, pwd, newpwd = "";
 			
 			idusuario = Integer.parseInt(request.getParameter("idusuario"));
 			usuario = request.getParameter("usuario_edit");
-			pwd = request.getParameter("newpwd");
+			pwd = request.getParameter("oldpwd");
+			newpwd = request.getParameter("newpwd");
 			
 			u.setIdUsuario(idusuario);
 			u.setUsuario(usuario);	
-			u.setPwd(pwd);
+			u.setPwd(newpwd);
+			
+			if(dtu.verificarPwd(pwd)) 
+			{
+				if(dtu.modificarUsuario(u))
+				{
+					response.sendRedirect("index.jsp?msj=1");
+				}
+				else
+				{
+					response.sendRedirect("index.jsp?msj=2");
+				}
 				
-			if(dtu.modificarUsuario(u))
-					{
-						response.sendRedirect("index.jsp?msj=1");
-					}
-					else
-					{
-						response.sendRedirect("index.jsp?msj=2");
-					}
+			}
+			else {
+				  response.sendRedirect("index.jsp?msj=3");
 				} 
+		}
 				catch (Exception e) 
 				{
 					System.err.println("SL USUARIO: Error al modificar usuario " +e.getMessage());

@@ -17,9 +17,9 @@ public class PoolConexion
 	//Datos de la Conexion
 	
 	private static String db = "Modulo_evaluacion";
-	private static String url = "jdbc:postgresql://localhost/"+db;
-	private static String user = "postgres";
-	private static String pass = "1234";
+	private static String url = "jdbc:postgresql://165.98.12.158:5432/"+db;
+	private static String user = "risw";
+	private static String pass = "P0$GR3$2021*";
 	
 	private PoolConexion()
 	{

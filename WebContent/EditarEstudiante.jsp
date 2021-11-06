@@ -125,12 +125,13 @@
 						action="./SLgestionEstudiante">
 						<div class="form-group">
 							<input hidden="true" name="idestudiante"
-								value="<%=idestudiante%>"> <input type="hidden"
-								id="opcion" name="opcion" value="2" required />
+								value="<%=idestudiante%>"> 
+								<input hidden="true" name="opcion"
+								value="2">
 								 <label
 								class="col-sm-2 control-label text-rpromedix">Usuario</label>
 							<div class="col-sm-6">
-								<select name="idusuario" class="form-control" disabled="disabled" required>
+								<select name="idusuario" class="form-control" required>
 									<%
 										ArrayList<VW_usuario> listaUsuarios = new ArrayList<VW_usuario>();
 										listaUsuarios = dtu.listarUsuarios();
@@ -192,6 +193,7 @@
 									value="<%=es.getNombres() %>" required>
 							</div>
 
+
 							<label class="col-sm-2 control-label text-rpromedix">Apellidos</label>
 							<div class="col-sm-6">
 								<input id="apellidos" name="apellidos" type="text"
@@ -203,14 +205,14 @@
 
 							<label class="col-sm-2 control-label text-gpromedix">Celular</label>
 							<div class="col-sm-6">
-								<input id="celular" name="celular" type="tel"
+								<input id="celular" name="celular" type="text"
 									class="form-control has-gpromedix"laceholder="Ej:77777777" data-toggle="tooltip" 
 									minlength="8" maxlength="8"
 							data-placement="bottom" title="Max:8" 
 									value="<%=es.getCelular() %>" required>
 							</div>
 
-							<label class="col-sm-2 control-label text-gpromedix">Condicion</label>
+							<label class="col-sm-2 control-label text-gpromedix">Condición</label>
 							<div class="col-sm-6">
 								<input id="condicion" name="condicion" type="text"
 									class="form-control has-gpromedix" placeholder="Ej:Actualmente laborando"

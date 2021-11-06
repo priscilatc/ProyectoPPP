@@ -6,16 +6,17 @@ import java.sql.SQLException;
 
 public class Conexion 
 {
-	private final String url = "jdbc:postgresql://localhost/Modulo_evaluacion";
-    private final String user = "postgres";
-    private final String password = "1234";
+	private static String db = "Modulo_evaluacion";
+	private static String url = "jdbc:postgresql://165.98.12.158:5432/"+db;
+	private static String user = "risw";
+	private static String pass = "P0$GR3$2021*";
     
     public Connection connect()
     {
     	Connection conn = null;
         try 
         {
-            conn = DriverManager.getConnection(url, user, password);
+            conn = DriverManager.getConnection(url, user, pass);
             System.out.println("Connected to the PostgreSQL server successfully.");
         } 
         catch (SQLException e) 

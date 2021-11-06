@@ -130,6 +130,7 @@ String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj"
                                             <th>Periodo de PPP</th>
                                             <th>Fecha de Inicio</th>
                                             <th>Fecha de Finalización</th>
+                                            <th>Plantilla</th>
                                             <th>URL</th>
                                             <th>Estado</th>
                                             <th>Opciones</th>
@@ -142,6 +143,7 @@ String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj"
                                             <th>Periodo de PPP</th>
                                             <th>Fecha de Inicio</th>
                                             <th>Fecha de Finalización</th>
+                                            <th>Plantilla</th>
                                             <th>URL</th>
                                             <th>Estado</th>
                                             <th>Opciones</th>
@@ -163,12 +165,18 @@ String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj"
                                        <td><%=vwe.getPeriodo() %></td>
                                        <td><%=vwe.getFechainicio() %></td>
                                        <td><%=vwe.getFechafin() %></td>
-                                       <td data-toggle="tooltip" data-placement="right" title="Ir a la plantilla."><a href="<%=vwe.getUrl()%>"><%=vwe.getUrl() %></td>
-                                       <td><%=vwe.getEstado() %></td>
+                                       <td data-toggle="tooltip" data-placement="right" title="Ir a la plantilla."><a href="<%=vwe.getPlantilla()%>"><%=vwe.getPlantilla() %></a></td>
+                                       <td><a href="<%=vwe.getUrl()%>"><%=vwe.getUrl() %></a></td>
+                                       <td><%=vwe.getActivo() %></td>
                                        <td>
                     						<span>
                     							<a onclick="valoreditar(<%=vwe.getIdevaluacion() %>)">
                     								<i class="fas fa-edit" data-toggle="tooltip" data-placement="right" title="Editar"></i>
+                    							</a>
+                    						</span>
+                    						<span>
+                    							<a onclick="eliminar(<%=vwe.getIdevaluacion() %>)">
+                    								<i class="fas fa-trash" data-toggle="tooltip" data-placement="right" title="Eliminar"></i>
                     							</a>
                     						</span>
                    						</td>                                                                                     
@@ -258,7 +266,18 @@ String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj"
 		window.location.href="EditarEvaluacion.jsp?idevaluacion="+idevaluacion;
 		location.reload
 	}
-	
+	function eliminar(id)
+	{
+		$.fn.jAlert.defaults.confirmQuestion = '¿Está Seguro?';
+    	$.fn.jAlert.defaults.confirmBtnText = 'Si';
+        confirm(function(e, btn){
+            e.preventDefault();
+            window.location.href = "SLeliminarEvaluacion?id="+id;
+        },
+        function(e,btn){
+            e.preventDefault();
+        });
+	}
 	    $(document).ready(function() {
 	        $('#tblevaluacion').DataTable({
 	            responsive: true,
@@ -288,6 +307,14 @@ String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj"
         	        if(mensaje == "4")
         	        {
         	            errorAlert('Error', 'Revise los datos insertados');
+        	        }
+        	        if(mensaje == "5")
+        	        {
+        	        	successAlert('Eliminado', 'Los datos han sido eliminados exitosamente')
+        	        }        	        
+        	        if(mensaje == "6")
+        	        {
+        	            errorAlert('Error', 'No se pudo borrar la evaluación');
         	        }
         	    });
 	 </script>

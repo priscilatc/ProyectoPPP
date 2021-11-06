@@ -54,7 +54,8 @@ public class DTEvaluacion {
 				vwe.setFechainicio(rs.getString("fechainicio"));
 				vwe.setFechafin(rs.getString("fechafin"));
 				vwe.setUrl(rs.getString("url"));
-				vwe.setEstado(rs.getString("estado"));
+				vwe.setPlantilla(rs.getString("plantilla"));
+				vwe.setActivo(rs.getString("activo"));
 				
 				listaEvaluaciones.add(vwe);
 				
@@ -101,8 +102,10 @@ public class DTEvaluacion {
 			rsE.moveToInsertRow();
 			rsE.updateInt("idnivel",ev.getIdNivel());
 			rsE.updateInt("idperiodoppp", ev.getIdPeriodoPPP());
-			rsE.updateString("url", ev.getUrl());			
-			rsE.updateInt("estado", ev.getEstado());
+			rsE.updateString("url", ev.getUrl());	
+			rsE.updateString("plantilla", ev.getPlantilla());
+			rsE.updateInt("activo", ev.getActivo());
+			rsE.updateInt("estado", 1);
 			
 			rsE.insertRow();
 			rsE.moveToCurrentRow();
@@ -139,8 +142,7 @@ public class DTEvaluacion {
 	public boolean modificarEvaluacion(Evaluacion ev)
 	{
 		boolean modificado = false;
-		
-		
+				
 		try 
 		{
 			c = PoolConexion.getConnection();
@@ -155,8 +157,10 @@ public class DTEvaluacion {
 
 						rsE.updateInt("idnivel",ev.getIdNivel());
 						rsE.updateInt("idperiodoppp", ev.getIdPeriodoPPP());
-						rsE.updateString("url", ev.getUrl());			
-						rsE.updateInt("estado", ev.getEstado());
+						rsE.updateString("url", ev.getUrl());
+						rsE.updateString("plantilla", ev.getPlantilla());
+						rsE.updateInt("activo", ev.getActivo());
+						rsE.updateInt("estado", 2);
 						
 						rsE.updateRow();
 						modificado = true;
@@ -191,6 +195,58 @@ public class DTEvaluacion {
 		return modificado;
 	}
 	
+	public boolean eliminarEvaluacion(int idevaluacion)
+	{
+		boolean eliminado = false;
+		
+		try 
+		{
+			c = PoolConexion.getConnection();
+			this.llenarRsEvaluacion(c);
+			rsE.beforeFirst();
+			while(rsE.next())
+			{
+				
+				if(rsE.getInt(1) == idevaluacion) 
+				{
+					rsE.updateInt("estado", 3);	
+					rsE.updateRow();
+					
+					eliminado = true;
+					break;
+				}
+				
+			}
+			
+		} 
+		catch (SQLException e) 
+		{
+			System.err.println("DTEvaluacion: Error al eliminar evaluacion " + e.getMessage());
+			e.printStackTrace();
+			System.err.println(e.getSQLState());
+		}
+		finally 
+		{
+			try 
+			{
+				if(rsE != null)
+				{
+					rsE.close();
+				}
+				if(c != null)
+				{
+					c.close();
+				}
+			} 
+			catch (Exception e2) 
+			{
+				System.err.println("DTEvaluacion: Error al cerrar conexion " + e2.getMessage());
+				e2.printStackTrace();
+			}
+		}		
+		return eliminado;
+	}
+	
 	public Evaluacion getEvaluacion(int idevaluacion)
 	{
 		Evaluacion ev = new Evaluacion();
@@ -208,6 +264,7 @@ public class DTEvaluacion {
 				ev.setIdEvaluacion(rs.getInt("idevaluacion"));
 				ev.setIdNivel(rs.getInt("idnivel"));
 				ev.setIdPeriodoPPP(rs.getInt("idperiodoppp"));
+				ev.setPlantilla(rs.getString("plantilla"));
 				ev.setUrl(rs.getString("url"));
 				ev.setEstado(rs.getInt("estado"));
 			}

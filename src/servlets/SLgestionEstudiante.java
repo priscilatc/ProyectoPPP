@@ -37,6 +37,9 @@ public class SLgestionEstudiante extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	/**
+	 *
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		int opc = 0;
@@ -46,19 +49,17 @@ public class SLgestionEstudiante extends HttpServlet {
 		Estudiante es = new Estudiante();
 		
 		int idusuario=0;
-		String carneuca = "";
 		
 		es.setNombres(request.getParameter("nombres"));
 		es.setApellidos(request.getParameter("apellidos"));
 		es.setCorreoInstitucional(request.getParameter("correoinstitucional"));
 		es.setCelular(request.getParameter("celular"));
 		es.setCondicion(request.getParameter("condicion"));
-		carneuca = request.getParameter("carneuca");
+		es.setCarneuca(request.getParameter("carneuca"));
 	    es.setSexo(Integer.parseInt(request.getParameter("sexo")));
 	    es.setIdCoordinacion(Integer.parseInt(request.getParameter("idcoordinacion")));
-	    idusuario = Integer.parseInt(request.getParameter("idusuario"));
-		es.setIdUsuario(idusuario);
-		es.setCarneuca(carneuca);
+	    idusuario=Integer.parseInt(request.getParameter("idusuario"));
+	    es.setIdUsuario(idusuario);
 	    
 		switch (opc) 
 		{
@@ -66,19 +67,20 @@ public class SLgestionEstudiante extends HttpServlet {
 				
 				try 
 				{
+
 					if(dte.verificarUsuarioExiste(idusuario)) {
 						response.sendRedirect("AgregarEstudiante.jsp?msj=1");
 					}
 					else {
-					if(dte.guardarEst(es))
-					{
-						response.sendRedirect("ListaEstudiante.jsp?msj=1");
-					}
-					else
-					{
-						response.sendRedirect("ListaEstudiante.jsp?msj=2");
-					}
-					}
+							if(dte.guardarEst(es))
+							{
+								response.sendRedirect("ListaEstudiante.jsp?msj=1");
+							}
+							else
+							{
+								response.sendRedirect("ListaEstudiante.jsp?msj=2");
+							}
+					}				
 					
 				} 
 				catch (Exception e) 
@@ -92,6 +94,7 @@ public class SLgestionEstudiante extends HttpServlet {
 			case 2:
 				try 
 				{
+
 					es.setIdEstudiante(Integer.parseInt(request.getParameter("idestudiante")));
 					if(dte.modificarEst(es)) 
 					{
@@ -99,7 +102,7 @@ public class SLgestionEstudiante extends HttpServlet {
 					}
 					else
 					{
-						response.sendRedirect("EditarEstudiante.jsp?msj=4");
+						response.sendRedirect("ListaEstudiante.jsp?msj=4");
 					}
 				} 
 				catch (Exception e) 
@@ -113,4 +116,5 @@ public class SLgestionEstudiante extends HttpServlet {
 				break;				
 	   }
 	}
+	
 }

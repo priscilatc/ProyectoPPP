@@ -7,6 +7,8 @@ public class Evaluacion {
 	private int idNivel;
 	private int idPeriodoPPP;
 	private String url;
+	private String plantilla;
+	private int activo;
 	private int estado;
 	
 	public int getIdEvaluacion() {
@@ -38,6 +40,18 @@ public class Evaluacion {
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	public String getPlantilla() {
+		return plantilla;
+	}
+	public void setPlantilla(String plantilla) {
+		this.plantilla = plantilla;
+	}
+	public int getActivo() {
+		return activo;
+	}
+	public void setActivo(int activo) {
+		this.activo = activo;
 	}
 	
 }

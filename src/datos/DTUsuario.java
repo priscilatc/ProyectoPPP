@@ -434,6 +434,40 @@ public class DTUsuario
 			}
 			return listaUR;
 		}
+	  
+	  public boolean verificarPwd(String pwd) {        
+	        boolean res = false;       
+	        String SQL = "SELECT pwd FROM public.usuario WHERE pwd = '?'";
+	        try{
+	        	c = PoolConexion.getConnection();
+				ps = c.prepareStatement(SQL);
+				ps.setString(1, pwd); 
+				rs = ps.executeQuery();
+	            if(rs.next())
+	                res = true;
+	        } catch(Exception e){
+	            System.err.print("Ha ocurrido un error: "+ e.getMessage());
+	        } 
+	        finally{
+	        	try {
+					if(rs != null){
+						rs.close();
+					}
+					if(ps != null){
+						ps.close();
+					}
+					if(c != null){
+						PoolConexion.cerrarConexion(c);
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+	        }        
+	        return res;
+	    }
 	 	
 	//Método para encriptar con MD5
 	public String md5(String input)

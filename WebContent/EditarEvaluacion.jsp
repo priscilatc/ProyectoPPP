@@ -181,11 +181,17 @@
 								placeholder="Ej:https://virtualpregrado.uca.edu.ni" data-toggle="tooltip" minlength="2" maxlength="120"
 								data-placement="bottom" title="Min:2 Max:120" value="<%=e.getUrl() %>" required>							
 							</div>
+							<label class="col-sm-2 control-label text-rpromedix">Plantilla</label>
+							<div class="col-sm-6">
+								<input id="plantilla" name="plantilla" type="url" class="form-control has-rpromedix" 
+								placeholder="Ej:https://virtualpregrado.uca.edu.ni" data-toggle="tooltip" minlength="2" maxlength="120"
+								data-placement="bottom" title="Min:2 Max:120" value="<%=e.getPlantilla() %>" required>							
+							</div>
 						
-						<label class="col-sm-2 control-label text-rpromedix">Estado</label>
+						<label class="col-sm-2 control-label text-rpromedix">Activo</label>
 						    <div class="col-sm-6">
-						      <select name="estado"class="form-control" required>
-						      	<option value="<%=e.getEstado()%>"></option>
+						      <select name="activo"class="form-control" required>
+						      	<option selected="true" value="<%=e.getActivo()%>"></option>
 						        <option value="1">Activo</option>
 						        <option value="2">Inactivo</option>							     
 						      </select>

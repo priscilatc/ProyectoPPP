@@ -100,6 +100,12 @@
                     </div>
 
                     <!-- Content Row -->
+                    <div class="alert alert-error" role="alert">
+                    	<h4 class="alert-heading">¡Alerta Importante!
+                    	</h4>
+                    	<p> Es necesario que tu sesión este iniciada en el navegador, y que la cuenta que utilices sea la empresarial para poder rellenar este formulario</p>
+                    	<hr>
+                   	</div>
                     <div class="row">
                     	<div class="card shadow mb-4"  style="width: 20rem;">
 						<div class="card-header py-3">

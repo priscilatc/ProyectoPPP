@@ -3,7 +3,9 @@
 <%@page import="datos.*, vistas.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%
+	String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj");
+%>
 <!DOCTYPE html>
 <html lang="es">
 <%
@@ -47,6 +49,7 @@
 
 <!-- Custom styles for this template-->
 <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<link rel="stylesheet" href="jAlert/dist/jAlert.css">
 
 <!-- Custom styles for this page -->
 <link href="vendor/datatables/dataTables.bootstrap4.min.css"
@@ -100,7 +103,7 @@
 						</div>
 						<label class="col-sm-2 control-label text-gpromedix">Contraseña Actual: </label>
 						<div class="col-sm-6">
-							<input id="pwd" name="pwd" type="password" class="form-control has-gpromedix" 
+							<input id="oldpwd" name="oldpwd" type="password" class="form-control has-gpromedix" 
 							placeholder="_ _ _ _ _ _ _ _ _ _" data-toggle="tooltip" minlength="10" maxlength="32"
 							data-placement="bottom" title="Min:10 Max:32"  required>
 						</div> 
@@ -197,6 +200,8 @@
 
 		<!-- Page level custom scripts -->
 		<script src="js/demo/datatables-demo.js"></script>
+		
+	
 
 </body>
 

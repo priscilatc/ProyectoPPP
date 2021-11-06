@@ -325,6 +325,10 @@
     	        {
     	            errorAlert('Error', 'Revisa la contraseña antigua');
     	        }
+    	        if(mensaje == "3")
+    	        {
+    	         	errorAlert('¡Fallo! No se ha modificado el usuario', 'La contraseña actual ingresada es incorrecta');	
+    	       	}
     	    });
 	</script>
 

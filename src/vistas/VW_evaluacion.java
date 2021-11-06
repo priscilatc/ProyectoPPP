@@ -6,7 +6,8 @@ public class VW_evaluacion {
 	private String nivel;
 	private String periodo;
 	private String url;
-	private String estado;
+	private String plantilla;
+	private String activo;
 	private String fechainicio;
 	private String fechafin;
 	
@@ -34,11 +35,11 @@ public class VW_evaluacion {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public String getEstado() {
-		return estado;
+	public String getActivo() {
+		return activo;
 	}
-	public void setEstado(String estado) {
-		this.estado = estado;
+	public void setActivo(String activo) {
+		this.activo = activo;
 	}
 	public String getFechainicio() {
 		return fechainicio;
@@ -51,6 +52,12 @@ public class VW_evaluacion {
 	}
 	public void setFechafin(String fechafin) {
 		this.fechafin = fechafin;
+	}
+	public String getPlantilla() {
+		return plantilla;
+	}
+	public void setPlantilla(String plantilla) {
+		this.plantilla = plantilla;
 	}
 
 }

@@ -97,7 +97,7 @@ public class SLgestionDocente extends HttpServlet {
 					}
 					else
 					{
-						response.sendRedirect("EditarDocente.jsp?msj=4");
+						response.sendRedirect("ListaDocente.jsp?msj=4");
 					}
 				} 
 				catch (Exception e) 
