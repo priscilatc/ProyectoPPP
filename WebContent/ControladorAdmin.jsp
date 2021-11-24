@@ -46,6 +46,9 @@
 		              if (cargo.equals("Tutor Tecnico")){
 							response.sendRedirect("404.jsp");
 						}
+		              if (cargo.equals(null)){
+		            	  response.sendRedirect("login.jsp");
+		              }
     %>
 <head>
 <meta charset="UTF-8">
@@ -221,7 +224,7 @@
                             <i class="fas fa-table fa-sm text-white-50"></i>
                              <span class="icon text-white-50">
                              </span>
-                             <span class="text">Tabla Periodo PPP</span>
+                             <span class="text">Tabla Periodo de Evaluaciones</span>
                             </a>
        
             

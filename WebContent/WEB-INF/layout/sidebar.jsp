@@ -30,6 +30,11 @@ String cargo = (String) session.getAttribute("rol");
 	<!-- Divider -->
 	<hr class="sidebar-divider">
 	<%
+	 if (cargo.equals(null)){
+		 response.sendRedirect("login.jsp");
+	 }
+	%>
+	<%
 		if (cargo.equals("Administrador")){
 	%>
 	<!-- Nav Item - Seguridad-->
@@ -107,18 +112,11 @@ String cargo = (String) session.getAttribute("rol");
      </li>
 		
 	<!-- Nav Item - Administración de Evaluaciones-->
-	<li class="nav-item"><a class="nav-link collapsed" href="#"
-		data-toggle="collapse" data-target="#collapseTwo"
-		aria-expanded="true" aria-controls="collapseTwo"> 
-		<i class="fab fa-wpforms"></i> <span>Administración de evaluaciones</span>
-	</a>
-		<div id="collapseTwo" class="collapse"
-			aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-			<div class="bg-white py-2 collapse-inner rounded">
-				<h6 class="collapse-header">Evaluaciones</h6>
-				<a href="ViewAutoevaluacion.jsp" class="collapse-item" >Autoevaluación</a> 
-			</div>
-		</div></li>
+		<li class="nav-item">
+       <a class="nav-link" href="ViewAutoevaluacion.jsp">
+           <i class="fab fa-wpforms"></i>
+           <span>Autoevaluación</span></a>
+     </li>
 		
 	<!-- Nav Item - Administración de Tutores-->
 	<li class="nav-item"><a class="nav-link collapsed" href="#"
@@ -155,6 +153,7 @@ String cargo = (String) session.getAttribute("rol");
 	<%
 	}
 	%>
+	
 	
 
 	<!-- Divider -->

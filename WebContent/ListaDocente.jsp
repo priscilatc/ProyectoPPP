@@ -120,8 +120,10 @@
 							<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" 
                            title="Lista de los docentes que se encuentran inscritos al sistema y pueden ser asignados a un alumno practicante, en esta sección podrás agregar un nuevo docente, buscar, editar o eliminar sus datos."></i>							
 							</h6>
-							<a onclick="generarreporteTutores();"> 
-							<i class="fas fa-file-pdf" title="Imprimir reporte de Tutores Academicos"></i>Descargar Reporte de Tutores Academicos</a> 
+							<hr>											
+							  <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" onclick="generarreporteTutores();" data-toggle="tooltip" data-placement="right"   title="Imprimir reporte de Tutores Academicos">      
+							  <span class="fas fa-file-pdf"></span> Descargar Reporte de Tutores Academicos</button> 
+							  
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
@@ -129,7 +131,6 @@
 									cellspacing="0">									
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Nombre</th>
                                             <th>Dirección</th>
                                             <th>Ciudad</th>
@@ -145,7 +146,6 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Nombre</th>
                                             <th>Dirección</th>
                                             <th>Ciudad</th>
@@ -170,7 +170,6 @@
                                     for(VW_docente vwd: listaDocentes)
                                     {
                                     %>
-                                      <td><%=vwd.getId_docente() %></td>
                                       <td><%=vwd.getNombre()%></td>
                                       <td><%=vwd.getDireccion() %></td>
                                       <td><%=vwd.getCiudad() %></td>                                     

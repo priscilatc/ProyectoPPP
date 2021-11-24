@@ -126,7 +126,6 @@
 									
 									<thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Estudiante</th>
                                             <th>Organización</th>
                                             <th>Area Laboral</th>
@@ -143,7 +142,6 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Estudiante</th>
                                             <th>Organización</th>
                                             <th>Area Laboral</th>
@@ -171,7 +169,6 @@
                                     %>
                                     
                                     <tr>
-                                      <td><%=vwp.getIdppp() %></td>
                                       <td><%=vwp.getEstudiante() %></td>
                                       <td><%=vwp.getOrganizacion() %></td>
                                       <td><%=vwp.getArea_laboral() %></td>

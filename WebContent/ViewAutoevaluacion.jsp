@@ -98,10 +98,15 @@
                         <h1 class="h3 mb-0 text-gray-800">Autoevaluación</h1>
                        
                     </div>
+                    
+                    <%
+						ev = dte.getAutoevaluacion();
+                    	if(ev.getActivo() == 1){
+					%>
 
                     <!-- Content Row -->
                     
-                    <div class="alert alert-error" role="alert">
+                    <div class="alert alert-warning" role="alert">
                     	<h4 class="alert-heading">¡Alerta Importante!
                     	</h4>
                     	<p> Es necesario que tu sesión este iniciada en el navegador, y que la cuenta que utilices sea la institucional para poder rellenar este formulario</p>
@@ -113,10 +118,7 @@
 							<h6 class="m-0 font-weight-bold text-primary">Datos de la Autoevaluación</h6>
 						
 						</div>
-						<%
-							ev = dte.getAutoevaluacion();
-						%>
-						
+											
 							<div class="table-responsive">
 								<table class="table borderless" id="tblInfo" width="160px"
 									cellspacing="0">															
@@ -135,6 +137,31 @@
 
 				      </div>
                     </div>
+                    <%
+                    	}if(ev.getActivo() ==2){
+                    %>
+                    <div class="card shadow mb-4">						
+                        	<div class="card-header py-3">
+                        	 </div>
+                             	<div class="card-body">
+                             	      <div class="container">
+					          <div class="row align-items-center">
+					            <div class="col-md-7 col-12 order-md-1 order-2">
+					                  <font color="#002663" size=6> 
+					              
+					               <h1>Lo sentimos  <%=(String)session.getAttribute("login")%> parece que no hay una evaluación disponible</h1></font>
+					            
+					              <p>Si tienes cualquier duda,  comunicate con  <br>
+					              el coordinador de la carrera.</p>
+					              <a ></a> </div>
+					            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/noHayEvaluacion.svg" class="mx-auto" alt="slide" width="445" height="350" ></div>
+					          </div>
+					        </div>
+                            	 </div>       
+                    		</div>
+                    <%
+                    	}
+                    %>
 
                 </div>
                 <!-- /.container-fluid -->

@@ -267,6 +267,7 @@ public class DTEvaluacion {
 				ev.setPlantilla(rs.getString("plantilla"));
 				ev.setUrl(rs.getString("url"));
 				ev.setEstado(rs.getInt("estado"));
+				ev.setActivo(rs.getInt("activo"));
 			}
 		} 
 		catch (SQLException e) 
@@ -314,6 +315,7 @@ public class DTEvaluacion {
 				ev.setFechainicio(rs.getString("fechainicio"));
 				ev.setFechafin(rs.getString("fechafin"));
 				ev.setUrl(rs.getString("url"));
+				ev.setActivo(rs.getInt("activo"));
 			}
 		} 
 		catch (SQLException e) 
@@ -361,6 +363,7 @@ public class DTEvaluacion {
 				ev.setFechainicio(rs.getString("fechainicio"));
 				ev.setFechafin(rs.getString("fechafin"));
 				ev.setUrl(rs.getString("url"));
+				ev.setActivo(rs.getInt("activo"));
 			}
 		} 
 		catch (SQLException e) 

@@ -125,7 +125,6 @@ String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj"
 									
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Nivel 180</th>
                                             <th>Periodo de PPP</th>
                                             <th>Fecha de Inicio</th>
@@ -138,7 +137,6 @@ String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj"
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Nivel 180</th>
                                             <th>Periodo de PPP</th>
                                             <th>Fecha de Inicio</th>
@@ -160,7 +158,6 @@ String varMSJ = request.getParameter("msj")== null?"":request.getParameter("msj"
                                     {
                                     %>
                                     <tr>
-                                       <td><%=vwe.getIdevaluacion() %></td>
                                        <td><%=vwe.getNivel() %></td>
                                        <td><%=vwe.getPeriodo() %></td>
                                        <td><%=vwe.getFechainicio() %></td>

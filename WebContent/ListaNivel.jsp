@@ -155,12 +155,7 @@
                     								<a onclick="eliminarNivel(<%=vwn.getIdNivel()%>);">
                     									<i class="fas fa-trash" data-toggle="tooltip" data-placement="right" title="Eliminar"></i>
                     								</a>
-                    							</span>
-                    							<span>
-                    								<a onclick="valoreditar(<%=vwn.getIdNivel() %>)">
-                    									<i class="fas fa-edit" data-toggle="tooltip" data-placement="right" title="Editar"></i>
-                    								</a>
-                    							</span>
+                    							</span>                    							
                     						</td>        
 										</tr>
 										<%

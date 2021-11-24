@@ -56,7 +56,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modulo Evaluación-Agregar  Periodo PPP</title>
+    <title>Modulo Evaluación-Agregar  Periodo de Evaluación</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
@@ -96,20 +96,20 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                     <h1 class="h3 mb-2 text-gray-800">Agregar  Periodo PPP</h1> 
+                     <h1 class="h3 mb-2 text-gray-800">Agregar  Periodo de Evaluación</h1> 
                       
                     <nav aria-label="breadcrumb">
 								  <ol class="breadcrumb">
 								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-								    <li class="breadcrumb-item"><a href="ListaPeriodoPPP.jsp">Lista de Periodo PPP</a></li>
-								    <li class="breadcrumb-item active" aria-current="AgregarPeriodo.jsp">Agregar  Periodo PPP</li>
+								    <li class="breadcrumb-item"><a href="ListaPeriodoPPP.jsp">Lista de Periodo de Evaluación</a></li>
+								    <li class="breadcrumb-item active" aria-current="AgregarPeriodo.jsp">Agregar  Periodo de Evaluación</li>
 								  </ol>
 								</nav>
                                       
 					<form class="form-group" method="post" action="./SLgestionPeriodo">
 					<input type="hidden" id="opcion" name="opcion" value="1" required />
 						<div class="form-group">
-							<label class="col-sm-2 control-label text-rpromedix">Descripcion: </label>
+							<label class="col-sm-2 control-label text-rpromedix">Nombre: </label>
 							<div class="col-sm-6">
 								<input id="descripcion" name="descripcion" type="text" class="form-control has-rpromedix" 
 							placeholder="Ej:PPP 1S 2020" data-toggle="tooltip" minlength="6" maxlength="30"

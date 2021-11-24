@@ -191,14 +191,16 @@
 						<label class="col-sm-2 control-label text-gpromedix">Activo</label>
 							<div class="col-sm-6">
 							<select id="activo" name="activo" class="form-control" required>
-                                <option value="" selected disabled>Seleccionar...</option> 
+                                <option value="">Seleccionar...</option> 
                                 <%if(e.getActivo()==1)
                                 {	
-                    				%><option selected="true" value="1">Activo</option>	
-                                	<option value="2">Inactivo</option>
+                    			%>
+                    			<option selected="true" value="1">Activo</option>	
+                                <option value="2">Inactivo</option>
                                 <%
-                                }else{
-                    				%><option value="1">Activo</option>	
+                                }if(e.getActivo()==2){
+                    			%>
+                    				<option value="1">Activo</option>	
                                 	<option selected="true" value="2">Inactivo</option>
                                 <%                               	
                                 }

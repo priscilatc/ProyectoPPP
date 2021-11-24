@@ -110,6 +110,8 @@
 								    <li class="breadcrumb-item active" aria-current="ListaAsignacionTutores.jsp">Lista de Asignación de Tutores</li>
 								  </ol>
 								</nav>
+								
+					
 
 					<!-- DataTales Example -->
 					<div class="card shadow mb-4">
@@ -117,12 +119,25 @@
 							<h6 class="m-0 font-weight-bold text-primary">Lista de Asignación de tutores
 							<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" 
 							title="Lista de tutor(es) que se encuentran inscritos al sistema y pueden o fueron asignados a un alumno practicante, en esta sección podrás asignar un tutor académico y un tutor técnico a los practicantes, buscar, editar o eliminar sus datos."></i>
-							</h6>	
-							<a onclick="generarreporteTutores();"> <i class="fas fa-file-pdf" title="Imprimir reporte de Asignaciones de Tutores"></i>Descargar Reporte de Asignaciones     </a> 
-							<a onclick="generarreporteTutorT();"> <i class="fas fa-file-pdf" title="Imprimir reporte de Asignaciones de Tutores Tecnicos"></i>Descargar Reporte de Asignaciones de Tutores Técnicos     </a>	
-							<a onclick="generarreporteTutorA();"> <i class="fas fa-file-pdf" title="Imprimir reporte de Asignaciones de Tutores Academicos"></i>Descargar Reporte de Asignaciones de Tutores Académicos</a>
-						</div>
-						
+							</h6>
+							<hr>
+					<div class="btn-group" role="group">
+				    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				      Lista de reportes de Asignación de Tutores
+				    </button>
+				    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+				
+				   <button type="button" class="btn btn-link" onclick="generarreporteTutores();" data-toggle="tooltip" data-placement="right"   title="Imprimir reporte de tutores asignados a los practicantes">
+				   <span class="fas fa-file-pdf"></span> Descargar Reporte de los tutores asignados a los practicante
+				   </button>                 
+				   	<button type="button" class="btn btn-link" onclick="generarreporteTutorT();" data-toggle="tooltip" data-placement="right"   title="Imprimir reporte de Asignaciones de Tutores Tecnicos">      
+				   	<span class="fas fa-file-pdf"></span> Descargar Reporte de Asignaciones de Tutores Técnicos
+				   	</button>                 
+				    <button type="button" class="btn btn-link" onclick="generarreporteTutorA();" data-toggle="tooltip" data-placement="right"   title="Imprimir reporte de Asignaciones de Tutores Academicos">      
+				    <span class="fas fa-file-pdf"></span> Descargar Reporte de Asignaciones de Tutores Académicos
+				    </button> 
+					</div>
+					</div>														
 						<div class="card-body" id="contenedor">
 							<div class="table-responsive">
 								<table class="table table-bordered" id="tblasignacion" width="100%" cellspacing="0">					                												

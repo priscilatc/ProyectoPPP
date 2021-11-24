@@ -57,7 +57,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-    <title>Modulo Evaluación- Lista de Periodo de Practica Pre-Profesional</title>
+    <title>Modulo Evaluación- Lista de Periodo de Evaluación</title>
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
 	type="text/css">
@@ -103,20 +103,20 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                     <h1 class="h3 mb-2 text-gray-800">Lista de Periodo de Práctica Pre-Profesional</h1>
+                     <h1 class="h3 mb-2 text-gray-800">Lista de Periodo de Evaluación</h1>
                     <nav aria-label="breadcrumb">
 				 				  <ol class="breadcrumb">
 								    <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-								    <li class="breadcrumb-item active" aria-current="ListaPeriodoPPP.jsp">Lista de Periodo PPP</li>
+								    <li class="breadcrumb-item active" aria-current="ListaPeriodoPPP.jsp">Lista de Periodo de Evaluación</li>
 								  </ol>
 								</nav>
 
                 	<!-- DataTales Example -->
 					<div class="card shadow mb-4">
 						<div class="card-header py-3">
-							<h6 class="m-0 font-weight-bold text-primary">Lista de Periodo de Práctica Pre-Profesional
+							<h6 class="m-0 font-weight-bold text-primary">Lista de Periodo de Evaluación
 							<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" 
-                           title="Lista de los periodos de duración de las PPP, esta sección podrás agregar un nuevo periodo, buscar, editar o eliminar sus datos."></i>	
+                           title="Lista de los periodos de duración de las evaluaciones, esta sección podrás agregar un nuevo periodo, buscar, editar o eliminar sus datos."></i>	
                            </h6>							
 						</div>
 						<div class="card-body">

@@ -128,8 +128,9 @@
 							<i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" 
                            title="Lista de los tutores técnicos  que se encuentran inscritos al sistema y pueden ser asignados a un alumno practicante, en esta sección podrás agregar un nuevo tutor técnico, buscar, editar o eliminar sus datos."></i>		
                            </h6> 
-                           <a onclick="generarreporteTutores();"> <i class="fas fa-file-pdf" 
-                           title="Imprimir reporte de Tutores Técnicos"></i>Descargar Reporte de Tutores Técnicos</a>                       
+                           <hr>													
+							  <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" onclick="generarreporteTutores();" data-toggle="tooltip" data-placement="right"   title="Imprimir reporte de Tutores Academicos">      
+							  <span class="fas fa-file-pdf"></span> Descargar Reporte de Tutores Técnicos</button>                      
 						</div>
 						<div class="card-body">
 							<div class="table-responsive" id="contenedor">
@@ -138,7 +139,6 @@
 									
 									   <thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Nombre</th>
                                             <th>Celular</th>
                                             <th>Dirección</th>
@@ -154,7 +154,6 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
                                             <th>Nombre</th>
                                             <th>Celular</th>
                                             <th>Dirección</th>
@@ -181,7 +180,6 @@
                                     %>
                                  
                                     	<tr>
-                                    		<td><%=vwt.getIdTutor()%></td>
                                     		<td><%=vwt.getNombre()%></td>
                                     		<td><%=vwt.getCelular()%></td>
                                     		<td><%=vwt.getDireccion()%></td>

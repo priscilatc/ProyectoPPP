@@ -7,6 +7,8 @@ public class VW_evaluaciontec {
 	private String fechainicio;
 	private String fechafin;
 	private String url;
+	private int activo;
+	
 	public int getIdevaluacion() {
 		return idevaluacion;
 	}
@@ -42,6 +44,12 @@ public class VW_evaluaciontec {
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	public int getActivo() {
+		return activo;
+	}
+	public void setActivo(int activo) {
+		this.activo = activo;
 	}
 	
 }

@@ -187,9 +187,10 @@
 							</div>							
 						</div>
 					</div>
+					
 				 </form>  
 					
-				</div>
+				
 
                   
                 <!-- /.container-fluid -->
@@ -203,7 +204,6 @@
             
             <!-- End of Footer -->
 
-        </div>
         <!-- End of Content Wrapper -->
 
     </div>
